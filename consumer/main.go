@@ -34,9 +34,7 @@ func main() {
 
 	go func() {
 		log.Println("consumer loop started...")
-		defer func() {
-			log.Println("consumer loop ended...")
-		}()
+		defer log.Println("consumer loop ended...")
 
 		for {
 			select {

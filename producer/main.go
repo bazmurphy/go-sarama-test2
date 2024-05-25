@@ -29,9 +29,7 @@ func main() {
 
 	go func() {
 		log.Println("producer loop started...")
-		defer func() {
-			log.Println("producer loop ended...")
-		}()
+		defer log.Println("producer loop ended...")
 
 		for {
 			newMessageKey := uuid.NewString()
